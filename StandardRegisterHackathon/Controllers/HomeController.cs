@@ -30,16 +30,17 @@ namespace StandardRegisterHackathon.Controllers
 
         public ActionResult Tip()
         {
-            var tipRepo = new TipRepo();
-
-            var tipList = tipRepo.GetTips();
 
             return View();
         }
 
         public ActionResult Topics()
         {
-            return View();
+            var tipRepo = new TipRepo();
+
+            var tipList = tipRepo.GetTips();
+
+            return View(tipList);
         }
     }
 }

@@ -180,6 +180,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\HomeViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -282,6 +283,7 @@
     <Content Include="Views\Shared\_TopNav.cshtml" />
     <Content Include="Views\Home\Tip.cshtml" />
     <Content Include="Views\Home\Topics.cshtml" />
+    <Content Include="Views\Home\Topics22.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -291,6 +293,10 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SQH.Domain.Model\SQH.Domain.Model.csproj">
+      <Project>{3b36c0d3-5ee8-4b46-a924-2cd7a2f07a79}</Project>
+      <Name>SQH.Domain.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SQH.Repositories\SQH.Repositories.csproj">
       <Project>{b94c419d-1de3-459f-8bac-ceeb503bbb14}</Project>
       <Name>SQH.Repositories</Name>

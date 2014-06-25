@@ -1,6 +1,9 @@
-﻿@{
+﻿@model IEnumerable<SQH.Domain.Model.Content>
+
+@{
     Layout = null;
 }
+
 
 <!DOCTYPE html>
 
@@ -22,13 +25,13 @@
 
         <div id="divCategoryNav">
             <ul>
-                @foreach (var category in categories)
+                @*@foreach (var category in categories)
                 {
                     if (@category.ParentID.isNull)
                     {
                         <li id="lst@(category.Name)"><a href="#">@category.Name</a></li>
                     }
-                }
+                }*@
             </ul>
         </div>
     </header>
@@ -41,10 +44,10 @@
         </div>
 
         <div id="divTipList">
-            @foreach (var tip in tips)
+            @foreach (var tip in Model)
             {
                 <details>
-                    <summary id="lst@(tip.Headline)">@tip.Headline</summary>
+                    <summary id="lst@(tip.TopicHeadline)">@tip.TopicHeadline</summary>
                     <p>@tip.Description</p>
                 </details>
             }
