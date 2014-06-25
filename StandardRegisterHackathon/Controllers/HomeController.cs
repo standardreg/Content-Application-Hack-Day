@@ -26,5 +26,11 @@ namespace StandardRegisterHackathon.Controllers
 
             return View();
         }
+
+        public ActionResult GetTips()
+        {
+
+            return View();
+        }
     }
 }
