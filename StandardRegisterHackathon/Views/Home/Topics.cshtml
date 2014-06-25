@@ -1,0 +1,61 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Standard Register - Safety, Quality & Health</h1>
+            <div>
+                <form name="formSearch" action="">
+                    <input type="text" id="inputSearch" />&nbsp;<input type="image" src="" alt="Search Button" />
+                </form>
+            </div>
+        </div>
+
+        <div id="divCategoryNav">
+            <ul>
+                @foreach (var category in categories)
+                {
+                    if (@category.ParentID.isNull)
+                    {
+                        <li id="lst@(category.Name)"><a href="#">@category.Name</a></li>
+                    }
+                }
+            </ul>
+        </div>
+    </header>
+
+    <section id="TipList">
+        <div id="divExpandCollapse">
+            <span id="spanExpandList"><a href="#">Expand All</a></span>
+            <span> | </span>
+            <span id="spanCollapseList"><a href="#">Collapse All</a></span>
+        </div>
+
+        <div id="divTipList">
+            @foreach (var tip in tips)
+            {
+                <details>
+                    <summary id="lst@(tip.Headline)">@tip.Headline</summary>
+                    <p>@tip.Description</p>
+                </details>
+            }
+        </div>
+    </section>
+
+    <footer></footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
