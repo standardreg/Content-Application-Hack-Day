@@ -36,5 +36,10 @@ namespace StandardRegisterHackathon.Controllers
 
             return View();
         }
+
+        public ActionResult Topics()
+        {
+            return View();
+        }
     }
 }
